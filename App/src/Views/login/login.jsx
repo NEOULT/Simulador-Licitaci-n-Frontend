@@ -40,8 +40,8 @@ const Login = () => {
             <button type="submit" className="login-button">
             Iniciar Sesión
             </button>
-            <a href="#" className="forgot-password">
-            ¿Olvidaste tu contraseña?
+            <a href="/empresa" className="forgot-password">
+            Soy una empresa
             </a>
         </form>
         </div>
