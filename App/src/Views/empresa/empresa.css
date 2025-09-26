@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #2a123b, #3a2a5c);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empresa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18), 0 0 15px 4px #8e44ad;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.upload-box h2 {
+    font-size: 1.5rem;
+    color: #6c3483;
+}
+
+.upload-box input[type="file"] {
+    padding: 0.5rem;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.upload-box .error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+}
+
+.submit-button {
+    background: linear-gradient(90deg, #8e44ad 60%, #b983ff 100%);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background: linear-gradient(90deg, #6c3483 60%, #8e44ad 100%);
+    transform: translateY(-2px);
+}
+
+.file-preview {
+    width: 100%;
+    text-align: center;
+}
+
+.file-preview h3 {
+    font-size: 1.2rem;
+    color: #6c3483;
+}
+
+.preview-frame {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.doc-preview {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
