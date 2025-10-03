@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Empresa from './Views/empresa/empresa.jsx';
-// import Licitador from './Views/licitador/licitador.jsx';
+import Licitador from './Views/licitador/licitador.jsx';
 import Login from './Views/login/login.jsx';
 
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/empresa" element={<Empresa />} />
-        {/* <Route path="/licitador" element={<Licitador />} /> */}
+        <Route path="/licitador" element={<Licitador />} />
       </Routes>
     </Router>
   );

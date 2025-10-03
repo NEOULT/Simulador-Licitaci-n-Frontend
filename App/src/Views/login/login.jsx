@@ -1,14 +1,26 @@
 import React, { useState } from "react";
 import "./login.css";
+import apiservice from "../../services/apiservice";
 
 const Login = () => {
-    const [email, setEmail] = useState("");
+    const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async  (e) => {
         e.preventDefault();
-        console.log("Email:", email);
+        console.log("user:", user);
         console.log("Password:", password);
+        
+        try {
+            const response = await apiservice.post("/auth/login", { user, password });
+            console.log("Login successful:", response);
+
+            if(response.success){
+                window.location.href = "/licitador";
+            }
+        } catch (error) {
+            console.error("Login failed:", error);
+        }
     };
 
     return (
@@ -16,13 +28,13 @@ const Login = () => {
         <form className="login-form" onSubmit={handleSubmit}>
             <h2 className="login-title">Iniciar Sesión</h2>
             <div className="input-group">
-            <label htmlFor="email">Correo Electrónico</label>
+            <label htmlFor="user">Usuario</label>
             <input
-                type="email"
-                id="email"
-                placeholder="Ingresa tu correo"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                id="user"
+                placeholder="Ingresa tu usuario"
+                value={user}
+                onChange={(e) => setUser(e.target.value)}
                 required
             />
             </div>
